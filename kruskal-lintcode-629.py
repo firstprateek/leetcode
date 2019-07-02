@@ -42,7 +42,7 @@ class DisjointSet:
 
 class Kruskal:
   def __init__(self, cities):
-    self.cities = sorted(cities, key=lambda x: (x[-1], x[0]))
+    self.cities = sorted(cities, key=lambda x: (x[-1], x[0], x[1]))
     self.uniqueCities = set()
     for citya, cityb, dist in cities:
       self.uniqueCities.update([citya, cityb])
